@@ -1,21 +1,16 @@
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import './App.css'
+import { BrowserRouter as Router } from "react-router-dom";
+import AppRoutes from "./AppRoutes";
 
 function App() {
-
   return (
     <Router>
       {/* <AuthProvider> */}
       {/* <ThemeProvider> */}
-      <Routes>
-        {/* import landing page here */}
-        <Route path="/" element={<div>Landing Page</div>}/>
-        <Route path="/dashboard" element={<div>Dashboard</div>}/>
-      </Routes>
+      <AppRoutes />
       {/* </ThemeProvider> */}
       {/* </AuthProvider> */}
     </Router>
-  )
+  );
 }
 
-export default App
+export default App;
