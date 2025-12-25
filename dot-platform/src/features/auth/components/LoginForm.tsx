@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import Button from '../../../components/Button';
 
 // TODO: form error handling
 type FieldTypes = {
@@ -6,7 +7,7 @@ type FieldTypes = {
   password: string;
 };
 
-const LoginPage = () => {
+const LoginForm = () => {
   const [formData, setFormData] = useState<FieldTypes>({
     email: '',
     password: '',
@@ -61,11 +62,13 @@ const LoginPage = () => {
           </label>
         </div>
         {/* need button components */}
-        <button type="submit">Sign In</button>
+        <Button type="submit" variant="primary" aria-label="Submit form">
+          Sign In
+        </Button>
       </form>
       {isSubmitted ? 'Thanks! Your dashboard will load soon' : null}
     </div>
   );
 };
 
-export default LoginPage;
+export default LoginForm;
